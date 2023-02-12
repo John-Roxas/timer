@@ -11,6 +11,8 @@ const timer = function(inputArray) {
     if (parseInt(element) >= 0 && typeof parseInt(element) === "number") {
       setTimeout(() => {
         process.stdout.write('\x07');
+
+        // something visual to log to the console, in case we can't hear the beeps!
         console.log(`beep ${element}`);
       }, parseInt(element) * 1000);
     } else if (typeof parseInt(element) !== "number") {
